@@ -1,413 +1,52 @@
-var weatherIcons = {
-  "200": {
-    "label": "thunderstorm with light rain",
-    "icon": "storm-showers"
-  },
-
-  "201": {
-    "label": "thunderstorm with rain",
-    "icon": "storm-showers"
-  },
-
-  "202": {
-    "label": "thunderstorm with heavy rain",
-    "icon": "storm-showers"
-  },
-
-  "210": {
-    "label": "light thunderstorm",
-    "icon": "storm-showers"
-  },
-
-  "211": {
-    "label": "thunderstorm",
-    "icon": "thunderstorm"
-  },
-
-  "212": {
-    "label": "heavy thunderstorm",
-    "icon": "thunderstorm"
-  },
-
-  "221": {
-    "label": "ragged thunderstorm",
-    "icon": "thunderstorm"
-  },
-
-  "230": {
-    "label": "thunderstorm with light drizzle",
-    "icon": "storm-showers"
-  },
-
-  "231": {
-    "label": "thunderstorm with drizzle",
-    "icon": "storm-showers"
-  },
-
-  "232": {
-    "label": "thunderstorm with heavy drizzle",
-    "icon": "storm-showers"
-  },
-
-  "300": {
-    "label": "light intensity drizzle",
-    "icon": "sprinkle"
-  },
-
-  "301": {
-    "label": "drizzle",
-    "icon": "sprinkle"
-  },
-
-  "302": {
-    "label": "heavy intensity drizzle",
-    "icon": "sprinkle"
-  },
-
-  "310": {
-    "label": "light intensity drizzle rain",
-    "icon": "sprinkle"
-  },
-
-  "311": {
-    "label": "drizzle rain",
-    "icon": "sprinkle"
-  },
-
-  "312": {
-    "label": "heavy intensity drizzle rain",
-    "icon": "sprinkle"
-  },
-
-  "313": {
-    "label": "shower rain and drizzle",
-    "icon": "sprinkle"
-  },
-
-  "314": {
-    "label": "heavy shower rain and drizzle",
-    "icon": "sprinkle"
-  },
-
-  "321": {
-    "label": "shower drizzle",
-    "icon": "sprinkle"
-  },
-
-  "500": {
-    "label": "light rain",
-    "icon": "rain"
-  },
-
-  "501": {
-    "label": "moderate rain",
-    "icon": "rain"
-  },
-
-  "502": {
-    "label": "heavy intensity rain",
-    "icon": "rain"
-  },
-
-  "503": {
-    "label": "very heavy rain",
-    "icon": "rain"
-  },
-
-  "504": {
-    "label": "extreme rain",
-    "icon": "rain"
-  },
-
-  "511": {
-    "label": "freezing rain",
-    "icon": "rain-mix"
-  },
-
-  "520": {
-    "label": "light intensity shower rain",
-    "icon": "showers"
-  },
-
-  "521": {
-    "label": "shower rain",
-    "icon": "showers"
-  },
-
-  "522": {
-    "label": "heavy intensity shower rain",
-    "icon": "showers"
-  },
-
-  "531": {
-    "label": "ragged shower rain",
-    "icon": "showers"
-  },
-
-  "600": {
-    "label": "light snow",
-    "icon": "snow"
-  },
-
-  "601": {
-    "label": "snow",
-    "icon": "snow"
-  },
-
-  "602": {
-    "label": "heavy snow",
-    "icon": "snow"
-  },
-
-  "611": {
-    "label": "sleet",
-    "icon": "sleet"
-  },
-
-  "612": {
-    "label": "shower sleet",
-    "icon": "sleet"
-  },
-
-  "615": {
-    "label": "light rain and snow",
-    "icon": "rain-mix"
-  },
-
-  "616": {
-    "label": "rain and snow",
-    "icon": "rain-mix"
-  },
-
-  "620": {
-    "label": "light shower snow",
-    "icon": "rain-mix"
-  },
-
-  "621": {
-    "label": "shower snow",
-    "icon": "rain-mix"
-  },
-
-  "622": {
-    "label": "heavy shower snow",
-    "icon": "rain-mix"
-  },
-
-  "701": {
-    "label": "mist",
-    "icon": "sprinkle"
-  },
-
-  "711": {
-    "label": "smoke",
-    "icon": "smoke"
-  },
-
-  "721": {
-    "label": "haze",
-    "icon": "day-haze"
-  },
-
-  "731": {
-    "label": "sand, dust whirls",
-    "icon": "cloudy-gusts"
-  },
-
-  "741": {
-    "label": "fog",
-    "icon": "fog"
-  },
-
-  "751": {
-    "label": "sand",
-    "icon": "cloudy-gusts"
-  },
-
-  "761": {
-    "label": "dust",
-    "icon": "dust"
-  },
-
-  "762": {
-    "label": "volcanic ash",
-    "icon": "smog"
-  },
-
-  "771": {
-    "label": "squalls",
-    "icon": "day-windy"
-  },
-
-  "781": {
-    "label": "tornado",
-    "icon": "tornado"
-  },
-
-  "800": {
-    "label": "clear sky",
-    "icon": "sunny"
-  },
-
-  "801": {
-    "label": "few clouds",
-    "icon": "cloudy"
-  },
-
-  "802": {
-    "label": "scattered clouds",
-    "icon": "cloudy"
-  },
-
-  "803": {
-    "label": "broken clouds",
-    "icon": "cloudy"
-  },
-
-  "804": {
-    "label": "overcast clouds",
-    "icon": "cloudy"
-  },
-
-
-  "900": {
-    "label": "tornado",
-    "icon": "tornado"
-  },
-
-  "901": {
-    "label": "tropical storm",
-    "icon": "hurricane"
-  },
-
-  "902": {
-    "label": "hurricane",
-    "icon": "hurricane"
-  },
-
-  "903": {
-    "label": "cold",
-    "icon": "snowflake-cold"
-  },
-
-  "904": {
-    "label": "hot",
-    "icon": "hot"
-  },
-
-  "905": {
-    "label": "windy",
-    "icon": "windy"
-  },
-
-  "906": {
-    "label": "hail",
-    "icon": "hail"
-  },
-
-  "951": {
-    "label": "calm",
-    "icon": "sunny"
-  },
-
-  "952": {
-    "label": "light breeze",
-    "icon": "cloudy-gusts"
-  },
-
-  "953": {
-    "label": "gentle breeze",
-    "icon": "cloudy-gusts"
-  },
-
-  "954": {
-    "label": "moderate breeze",
-    "icon": "cloudy-gusts"
-  },
-
-  "955": {
-    "label": "fresh breeze",
-    "icon": "cloudy-gusts"
-  },
-
-  "956": {
-    "label": "strong breeze",
-    "icon": "cloudy-gusts"
-  },
-
-  "957": {
-    "label": "high wind, near gale",
-    "icon": "cloudy-gusts"
-  },
-
-  "958": {
-    "label": "gale",
-    "icon": "cloudy-gusts"
-  },
-
-  "959": {
-    "label": "severe gale",
-    "icon": "cloudy-gusts"
-  },
-
-  "960": {
-    "label": "storm",
-    "icon": "thunderstorm"
-  },
-
-  "961": {
-    "label": "violent storm",
-    "icon": "thunderstorm"
-  },
-
-  "962": {
-    "label": "hurricane",
-    "icon": "cloudy-gusts"
-  }
-};
 $(document).ready(function() {
+	var celcius, fahrenheit;
   //вычисляем координаты
-  navigator.geolocation.getCurrentPosition(function(position) {
-    var href = 'https://api.openweathermap.org/data/2.5/weather?lat='+position.coords.latitude +'&lon=' +position.coords.longitude+'&APPID=ca840eee26ce8ed1cb4ecd5aed2c7a5e';
-    // делаем запрос на сайт с погодой
-    $.getJSON(href, function(json) {
-      var celcius = json.main.temp-273.15;
-      $('#place').html(json.name +', '+json.sys.country);
-      $('#temp').html('<span>'+celcius.toFixed(1)+'</span> &deg;<a href="#">C</a>');
-      //добавление родных иконок openweathermap
-      // $('div').html('<img src=http://openweathermap.org/img/w/'+json.weather[0].icon+'.png alt='+json.weather[0].description+'></img>');
-      
-      //добавление weather-icons
-      req = $.getJSON(href);
-      req.then(function(resp) {
-  var prefix = 'wi wi-';
-  var code = resp.weather[0].id;
-  var icon = weatherIcons[code].icon; //глобальная переменная объявлена в самом начале
-    //отделяем иконки дня от ночи
-    var today = new Date();
-    var hour = today.getHours();
-      if (hour > 6 && hour < 20) {
-         icon = "day-"+icon;
-      } else {
-         icon ="night-"+icon;
-        }
-   icon = prefix + icon;
- // вписываем готовые иконки
-  $('i').addClass(icon);
-});
-      // кликаем на цельсий для фаренгейта и наоборот
-       $('a').on('click', function(e){
-         e.preventDefault();
-         if ($('a').text() == 'C') {
-          var far = (celcius* (9/5)) + 32;
-          $('#temp>span').html(far.toFixed(1));
-          $('a').html('F');
-         }
-         else {
-          $('#temp>span').html(celcius.toFixed(1));
-          $('a').html('C');
-         }
-         });
-      });
-   });
+	if (navigator.geolocation) {
+	  navigator.geolocation.getCurrentPosition(function(position) {
+	    let url = 'https://api.openweathermap.org/data/2.5/weather?lat='+position.coords.latitude +'&lon=' +position.coords.longitude+'&APPID=ca840eee26ce8ed1cb4ecd5aed2c7a5e';
+	    getWeather(url);
+	  });
+	} else {
+		console.log("Geolocation is not supported by this browser.");
+		alert("Geolocation is not supported by this browser.");
+	}
+	//добавление weather-icons
+	function icons(weather) {
+			let prefix = 'wi wi-';
+		 	let code = weather.weather[0].id;
+		    let icon = weatherIcons[code].icon; //переменная weatherIcons находится в локальном файле, файл привязан к index.html
+			//отделяем иконки дня от ночи
+			let today = new Date();
+			let hour = today.getHours();
+			(hour > 6 && hour < 20) ?  icon = "day-"+icon:   icon ="night-"+icon;
+			return prefix + icon;
+	}
+	//отображение получаемой информации на экране
+	function UI (place, temp, icon) {
+		$('#place').html(place);
+		$('#temp').html(temp);
+		$('a').html('C');
+		$('#icon').addClass(icon);
+	}
+	// делаем запрос на сайт с погодой
+	function getWeather (url) {
+	   $.getJSON( url, function(data) {
+		      celcius = data.main.temp-273.15;
+			  fahrenheit = celcius*(9/5) + 32;
+		      let place = data.name +', '+data.sys.country;
+			  let temp = celcius.toFixed(1) + '&deg';
+			  UI(place, temp, icons (data));
+		});
+	};
+	 // кликаем на цельсий для фаренгейта и наоборот
+	 $('a').on('click', function(e){
+		 e.preventDefault();
+		 if ($('a').text() === 'C') {
+       $('#temp').html(fahrenheit.toFixed(1)+ '&deg');
+       $('a').html('F');
+		 } else {
+		   $('#temp').html(celcius.toFixed(1)+ '&deg');
+		   $('a').html('C');
+		 }
+	});
 });
