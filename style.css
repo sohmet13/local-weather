@@ -3,6 +3,8 @@ body {
 }
 h1 {
   font-size: 400%;
+}
+h1>span {
   white-space: nowrap;
 }
 h2 {
@@ -15,7 +17,7 @@ p {
 h1, h2, p, i {
   color: white;
   }
-div>i {
+#icon {
   font-size: 400%;
 }
 a:hover, a:focus {

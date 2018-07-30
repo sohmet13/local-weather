@@ -18,7 +18,7 @@ $(document).ready(function() {
 			//отделяем иконки дня от ночи
 			let today = new Date();
 			let hour = today.getHours();
-			(hour > 6 && hour < 20) ?  icon = "day-"+icon:   icon ="night-"+icon;
+			(hour < 0 && hour > 6) ?  icon = "night-"+icon: icon ="day-"+icon;
 			return prefix + icon;
 	}
 	//отображение получаемой информации на экране
