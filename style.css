@@ -3,17 +3,22 @@ body {
 }
 h1 {
   font-size: 400%;
-}
-h1>span {
   white-space: nowrap;
 }
-h1, h3, i {
+h2 {
+	font-size: 350%;
+	margin-bottom: 30px;
+}
+p {
+	font-size: 150%;
+}
+h1, h2, p, i {
   color: white;
   }
-#icon {
+div>i {
   font-size: 400%;
 }
-a {
+a:hover, a:focus {
   text-decoration:none;
   outline:none;
 }
