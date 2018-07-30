@@ -10,10 +10,10 @@ h1>span {
 h1, h3, i {
   color: white;
   }
-div>i {
+#icon {
   font-size: 400%;
 }
-a:hover, a:focus {
+a {
   text-decoration:none;
   outline:none;
 }
