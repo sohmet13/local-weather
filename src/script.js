@@ -1,4 +1,12 @@
 import $ from 'jquery';
+
+import '../node_modules/weathericons/font/weathericons-regular-webfont.eot';
+import '../node_modules/weathericons/font/weathericons-regular-webfont.svg';
+import '../node_modules/weathericons/font/weathericons-regular-webfont.ttf';
+import '../node_modules/weathericons/font/weathericons-regular-webfont.woff';
+import '../node_modules/weathericons/font/weathericons-regular-webfont.woff2';
+import '../node_modules/weathericons/sass/weather-icons.min.scss';
+
 import './style.sass';
 
 $(document).ready(function() {
