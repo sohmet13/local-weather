@@ -15,6 +15,7 @@ $(document).ready(function() {
     if (navigator.geolocation) {
 	  navigator.geolocation.getCurrentPosition(function(position) {
 	    let url = 'https://api.openweathermap.org/data/2.5/weather?lat='+position.coords.latitude +'&lon=' +position.coords.longitude+'&APPID=ca840eee26ce8ed1cb4ecd5aed2c7a5e';
+	    let weatherIcons = 'https://gist.githubusercontent.com/tbranyen/62d974681dea8ee0caa1/raw/3405bfb2a76b7cbd90fde33d8536f0cd13706955/icons.json'
 	    getWeather(url);
 	  });
 	} else {
@@ -34,10 +35,11 @@ $(document).ready(function() {
 	}
 	//отображение получаемой информации на экране
 	function UI (place, temp, icon) {
-		$('#place').html(place);
-		$('#temp').html(temp);
+		$('.weather-info__place').html(place);
+		$('.weather-info__temperature').html(temp);
 		$('a').html('C');
-		$('#icon').addClass(icon);
+        console.log(icon);
+        $('.weather-info__icon').addClass(icon);
 	}
 	// делаем запрос на сайт с погодой
 	function getWeather (url) {
@@ -53,10 +55,10 @@ $(document).ready(function() {
 	 $('a').on('click', function(e){
 		 e.preventDefault();
 		 if ($('a').text() === 'C') {
-       $('#temp').html(fahrenheit.toFixed(1)+ '&deg');
+       $('.weather-info__temperature').html(fahrenheit.toFixed(1)+ '&deg');
        $('a').html('F');
 		 } else {
-		   $('#temp').html(celcius.toFixed(1)+ '&deg');
+		   $('.weather-info__temperature').html(celcius.toFixed(1)+ '&deg');
 		   $('a').html('C');
 		 }
 	});

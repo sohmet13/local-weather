@@ -2,20 +2,26 @@
 
 <html>
   <head>
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>-->
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css"/>-->
-    <!--<link rel="stylesheet" href="src/style.css">-->
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
 	  <script src="weatherIcons.js"></script>
-    <!--<script src="src/script.js"></script>-->
       <script type="text/javascript" src="dist/bundle.js" charset="utf-8"></script>
   </head>
 
-  <body class='container-fluid'>
-	  <h1 class='text-center'>Local Weather <span>Pr<i class="wi wi-hail"></i>ject</span></h1>
-	  <h2 class='text-center'>Weather App</h2>
-	  <p id='place' class='text-center'></p>
-	  <p class='text-center'><span id='temp'></span><a href="#"></a></p>
-	  <div class='text-center'><i id='icon'></i></div>
+  <body>
+	  <h1 class="header">Local Weather
+          <span>
+              Pr<i class="wi wi-hail"></i>ject
+          </span>
+      </h1>
+	  <h2 class="app-name">Weather App</h2>
+
+      <div class="weather-info">
+          <p class='weather-info__place weather-info_font-size_b'></p>
+          <p class="weather-info_font-size_b">
+              <span class='weather-info__temperature'></span>
+              <a class="weather-info__degrees-icon" href="#"></a>
+          </p>
+
+          <i class='weather-info__icon'></i>
+      </div>
   </body>
 </html>
