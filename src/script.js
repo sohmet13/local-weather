@@ -1,7 +1,10 @@
+import $ from 'jquery';
+import './style.sass';
+
 $(document).ready(function() {
 	var celcius, fahrenheit;
   //вычисляем координаты
-	if (navigator.geolocation) {
+    if (navigator.geolocation) {
 	  navigator.geolocation.getCurrentPosition(function(position) {
 	    let url = 'https://api.openweathermap.org/data/2.5/weather?lat='+position.coords.latitude +'&lon=' +position.coords.longitude+'&APPID=ca840eee26ce8ed1cb4ecd5aed2c7a5e';
 	    getWeather(url);
