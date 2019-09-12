@@ -1,0 +1,36 @@
+{
+  "name": "local-weather",
+  "version": "1.0.0",
+  "description": "The project shows a local weather. Made with the usage of JQuery.",
+  "main": "src/script.js",
+  "scripts": {
+    "build": "webpack -p",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server"
+  },
+  "author": "Anna Loshchakova",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "weathericons": "^2.1.0",
+    "webpack": "^4.29.6",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "devDependencies": {
+    "css-loader": "^2.1.1",
+    "file-loader": "^4.2.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^2.1.0",
+    "webpack-cli": "^3.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sohmet13/Local-Weather.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sohmet13/Local-Weather/issues"
+  },
+  "homepage": "https://github.com/sohmet13/Local-Weather#readme"
+}

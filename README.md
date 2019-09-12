@@ -1,5 +1,12 @@
-# Local-Weather
-The project shows local weather. Made with the usage of JQuery
+# local-weather
+The project shows local weather.
 
-The project is available on CodePen.
-https://codepen.io/sohmet13/full/mXdJwE/
+1. JQuery 3+
+2. Webpack 4+
+
+Browsers:
+1. Google Chrome 75+
+2. Opera 62+
+3. Firefox 67+
+4. Microsoft Edge 42+
+
