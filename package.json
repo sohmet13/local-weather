@@ -11,7 +11,7 @@
   "author": "Anna Loshchakova",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "weathericons": "^2.1.0",
     "webpack": "^4.29.6",
     "webpack-dev-server": "^3.7.2"
